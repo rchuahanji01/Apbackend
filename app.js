@@ -15,8 +15,8 @@ app.get('/' , async (req,res)=>{
     }
 })
 
-app.use('/api/Automation/index' , require('./restApi/index'))
-
+app.use('/api/Automation/index' , require('./restApi/mainIndex/index'))
+app.use('/api/Automation/Auth' , require('./restApi/Auth/Auth'))
 console.log('<<<<<<<<<<<<<<<<<< all route executed>>>>>>>>>>>>>>>>>>>')
 const StartServer = async ()=>{
     try{

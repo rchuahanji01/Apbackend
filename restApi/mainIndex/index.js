@@ -1,11 +1,11 @@
-const { pool } = require('../Database/postgresdb');
+const { pool } = require('../../Database/postgresdb');
 const express = require('express');
-const { success, error } = require('../Middelwares/apiResponse');
+const { success, error } = require('../../Middelwares/apiResponse');
 const NodeCache = require("node-cache");
 const myCache = new NodeCache();
-const getipaddress = require('../Middelwares/getipaddress');
-const EncryptJson = require('../Middelwares/EncryptJson');
-const DecryptJson = require('../Middelwares/DecryptJson');
+const getipaddress = require('../../Middelwares/getipaddress');
+const EncryptJson = require('../../Middelwares/EncryptJson');
+const DecryptJson = require('../../Middelwares/DecryptJson');
 const bodyparser = require('body-parser')
 const router = express.Router();
 router.use(bodyparser.json())
