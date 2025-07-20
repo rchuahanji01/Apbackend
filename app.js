@@ -5,8 +5,8 @@ const dotenv = require('dotenv')
 dotenv.config();
 const port = process.env.port || 3000
 const connectDb = require('./Database/mongodb')
-
-
+const PostgresDb = require('./Database/postgresdb')
+const encrypt = require('./Middelwares/DecryptJson')
 app.get('/' , async (req,res)=>{
     try{
         res.send("hellow")
@@ -14,6 +14,10 @@ app.get('/' , async (req,res)=>{
         res.status(500).json({message:"something went wrong" , err})
     }
 })
+
+app.use('/api/Automation/index' , require('./restApi/index'))
+
+console.log('<<<<<<<<<<<<<<<<<< all route executed>>>>>>>>>>>>>>>>>>>')
 const StartServer = async ()=>{
     try{
         

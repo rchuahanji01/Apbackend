@@ -11,10 +11,14 @@
   "description": "",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "crypto-js": "^4.2.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "gitignore": "^0.7.0",
+    "ipware": "^2.0.0",
     "mongoose": "^8.16.3",
-    "nodemon": "^3.1.10"
+    "node-cache": "^5.1.2",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3"
   }
 }
