@@ -7,6 +7,15 @@ const port = process.env.port || 3000
 const connectDb = require('./Database/mongodb')
 const PostgresDb = require('./Database/postgresdb')
 const encrypt = require('./Middelwares/DecryptJson')
+const cors = require('cors')
+app.use(cors());
+
+// ✅ OR: Allow specific origin (more secure for prod)
+app.use(cors({
+  origin: 'http://localhost:5173', // or your deployed frontend domain
+  credentials: true, // only if you're using cookies
+}));
+
 app.get('/' , async (req,res)=>{
     try{
         res.send("hellow")
