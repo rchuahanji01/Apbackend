@@ -18,12 +18,12 @@ const DecryptJson = (JsonValue) => {
 
   return decrypted.toString(CryptoJS.enc.Utf8); // Plaintext string
 };
-// let encryptedData = 'NfJGPNDt85rrr/82UkVKbo3gnGxFPjaVA+7gcGtCOLdtG5oZSqsM2E0hFk3HEWrn';
+let encryptedData = 'L07Vt9cydE1e3SEtnHt9umnGp743Sv6izDUvMbKHFntlgxlNlX/J8yTpHLqPsolBTj0ZRT8aS7o9xNHraoUxJjAcDs0VXZYHbI+mXI+PvPu3BYuAHfjYnsHRo32ryO1dVEo9JdqO+jEaAz4UPporEAr999vT1o9mLvDhOzIGut0+q6/ilJ5EFq2Be9Q/zraSTaFTha+/sCE+84CoFnP4jC7+UoWstg2ggcgS0zbNC2pcZ25BDGIuxAs/xDXzLgc1933qVDBJBH04D1iC0/ySv+8Tiv9t+RAmxbhwBKfRbzfnM3vz8ALF9Q8Db7Lhcm9cdNITDXzle7vfSygwcU12/qgzy+DXxaFiuEGaX9mrfd7rffgP2k18dABPiHRRD7Fcd8MfL7/vItJ2mPfATmSz9PXMnps6iW7jxyEwFBACKjRe18g+CZh2NoHj7GAeDNZo';
 
-// try {
-//   const decrypted = DecryptJson(encryptedData);
-//   console.log('Decrypted data:', decrypted);
-// } catch (err) {
-//   console.error('❌ Failed to decrypt:', err.message);
-// }
+try {
+  const decrypted = DecryptJson(encryptedData);
+  console.log('Decrypted data:', decrypted);
+} catch (err) {
+  console.error('❌ Failed to decrypt:', err.message);
+}
 module.exports = DecryptJson;
